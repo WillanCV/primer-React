@@ -1,6 +1,6 @@
 /**
- * Este componente tiene todos los ciclos de vida (lifeCycle)
- */
+* Este componente tiene todos los ciclos de vida (lifeCycle)
+*/
 
 import React, {useEffect} from 'react';
 

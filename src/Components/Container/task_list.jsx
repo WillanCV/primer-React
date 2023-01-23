@@ -27,13 +27,35 @@ const TaskListComponent = () => {
 
   return (
     <div>
-      <div>
-       <h1>
-        Your Task
-       </h1> 
+      <div className='col-12'>
+        <div className='card'>
+          {/*Card Header (title) */}
+          <div className='card-header p-3'>
+            <h5>
+              Your Task:
+            </h5>
+          </div>
+          {/*Card body (contet) */}
+          <div className='card-body' data-mdd-perfect-scrollbar= 'true' style={{position: 'relative', height: '400px'}}>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Title</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Priority</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {/*TODO: Iterar sobre una lista de tareas */}
+                <TaskComponent task={ defaultTask }></TaskComponent>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
       { /*TODO: Aplicar un For/Map para renderizar una lista (pendiente)*/ }
-      <TaskComponent task={ defaultTask }></TaskComponent>
+      {/*<TaskComponent task={ defaultTask }></TaskComponent>*/}
     </div>
   );
 };

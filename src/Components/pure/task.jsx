@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Task } from '../../models/task.class';
-
+import '../../Styles/task.scss'
 
 
 const TaskComponent = ({ task }) => {
@@ -14,8 +14,26 @@ const TaskComponent = ({ task }) => {
   }, [task]);
 
   return (
-    <div>
-      <h2 class='task-name'>
+
+    <tr className='fw-normal'>
+      <th>
+        <span className='ms-2'>{ task.name}</span>
+      </th>
+      <td>
+        <span className='alagn-middle'>{ task.description}</span>
+      </td>
+      <td>
+        {/*TODO: Sustituir por un badge */}
+        <span className='alagn-middle'>{ task.level}</span>
+      </td>
+      <td>
+        {/*TODO:Sustituir por Iconos */}
+        <span className='alagn-middle'>{ task.completed}</span>
+      </td>
+    </tr>
+
+    /*<div>
+      <h2 className='task-name'>
         Nombre: { task.name }
       </h2>
       <h3>
@@ -27,7 +45,7 @@ const TaskComponent = ({ task }) => {
       <h5>
         This task is: { task.completed ? 'COMPLETED' : 'PENDING' }
       </h5>
-    </div>
+    </div>*/
   );
 };
 
