@@ -6,6 +6,7 @@ import { Task } from './models/task.class';
 import TaskListComponent from './Components/Container/task_list';
 import GreetingStyles from './Components/pure/greetingStyles';
 import ComponenteFuncional from './Components/pure/ComponenteFuncional';
+import Father from './Components/Container/father';
 
 function App() {
   return (
@@ -24,6 +25,10 @@ function App() {
         {/*<GreetingStyles name="Willian"></GreetingStyles>*/}
         {/*<ComponenteFuncional></ComponenteFuncional>*/}
       {/*</header>*/}
+
+      {/*Gestion de eventos */}
+      {/*<Father></Father>*/}
+
       <TaskListComponent></TaskListComponent>
       
     </div>
